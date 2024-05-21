@@ -23,7 +23,7 @@ Execução em Docker, dentro da AWS Cloud.
 * O grupo pode ficar livre quanto à estratégia adotada para executar o Docker na AWS.
 * Exemplos de como executar:
   * [Deploy Node js Application on AWS EC2 Server](https://youtu.be/VHzeoDK6L0c?feature=shared)
-  * [Realizando seu primeiro deploy para o ECS da AWS](https://youtu.be/x0bfNHo88Cg?feature=shared)
+  * [Docker na AWS: EC2 ou Elastic Beanstalk? O que é melhor?](https://youtu.be/TJSK9MRPZs4?si=FCm_lDQWIVEUAHlj)
 
 ***
 
