@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router(); // Cria um roteador para gerenciar as rotas
+const homeController = require('../controllers/homeController'); // Importa o controller da página inicial
 
 // Define a rota para a página inicial'
 router.get("/", homeController.renderHomePage);
