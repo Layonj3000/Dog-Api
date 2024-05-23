@@ -1,6 +1,7 @@
 const express = require('express');
 const rotas = require('./routes/rotas'); // Importa as rotas definidas em 'routes/index.js'
 const app = express();
+const path = require('path'); // Importa o módulo 'path' para trabalhar com diretórios e caminhos de arquivos
 
 // Middleware para usar as rotas definidas
 app.use('/', rotas);
