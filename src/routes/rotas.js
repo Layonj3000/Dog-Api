@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router(); // Cria um roteador para gerenciar as rotas
 const homeController = require('../controllers/homeController'); // Importa o controller da página inicial
+const dogController = require('../controllers/dogController'); // Importa o controller de cachorros
 
 // Define a rota para a página inicial'
 router.get("/", homeController.renderHomePage);
