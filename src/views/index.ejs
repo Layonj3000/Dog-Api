@@ -37,6 +37,29 @@
       <% } %>
     </main>
   </div>
-
+  <script>
+    document.getElementById('new-image-button').addEventListener('click', function() {
+      var selectedBreed = '<%= breed %>';
+      if (selectedBreed) {
+        fetch('/new-dog-image?breed=' + encodeURIComponent(selectedBreed))
+          .then(response => response.json())
+          .then(data => {
+            if (data.message) {
+              var dogImage = document.getElementById('dog-image');
+              dogImage.src = data.message;
+            } else {
+              alert('Não foi possível carregar a nova imagem. Tente novamente.');
+            }
+          })
+          .catch(error => {
+            console.error('Erro ao carregar a nova imagem de cachorro:', error);
+            alert('Ocorreu um erro ao carregar a nova imagem. Tente novamente.');
+          });
+      } else {
+        alert('Por favor, selecione uma raça.');
+      }
+    });
+  </script>
 </body>
 </html>
+
