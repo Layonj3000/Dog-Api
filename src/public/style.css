@@ -149,3 +149,15 @@ img:hover {
 #new-image-button:hover {
   background-color: #45a049;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  input[type="text"], select, button[type="submit"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
