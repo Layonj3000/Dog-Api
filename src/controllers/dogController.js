@@ -38,6 +38,6 @@ exports.getDogByBreed = async (req, res) => {
         breeds = Object.keys(breedsResponse.data.message); // Extrai as raças da resposta da API
 
         // Renderiza a página inicial ('index') com a mensagem de erro e a lista de raças
-        res.render("index", { dog: null, error, breeds });
+        res.render("index", { dog: null, error, breeds, breed});
     }
 };
