@@ -4,6 +4,7 @@
   "description": "Avaliação das segunda e terceira sprints do programa de bolsas Compass UOL para formação em machine learning para AWS.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "repository": {
