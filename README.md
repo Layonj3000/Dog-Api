@@ -1,62 +1,139 @@
-# Avaliação das Sprints 2 e 3 - Programa de Bolsas Compass UOL / AWS - ABRIL/2024
+# Avaliação Sprint 2-3 -> Programa de Bolsas Compass UOL / AWS - ABRIL/2024
 
-Avaliação das segunda e terceira sprints do programa de bolsas Compass UOL para formação em machine learning para AWS.
+ <p align="center">
+ <a href="#-descrição">Descrição</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> • 
+ <a href="#-Como-usar-o-Aplicativo">Uso</a> • 
+ <a href="#-Tecnologias-Utilizadas"> Tecnologias </a> •
+ <a href="#-Instalação-em-caso-de-uso-local"> Instalação</a> •
+ <a href="#-Dificuldades">Dificuldades</a> 
+</p>
 
-***
+##  Descrição
 
-## Execução (Código Fonte)
+Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API Dog CEO para obter as imagens das raças de cães. O projeto também está configurado para ser executado em um container Docker usando Docker Compose e esta hospeado na AWS C2.
+      
+<img src="image.png" height="400" >
 
-Faça um sistema em JavaScript/NodeJS que produza uma interface para consulta de API pública. Este sistema deverá estar em container com **Docker**, em cloud AWS. 
+## Funcionalidades
 
-**Especificações**:
+- [x] **Buscar Imagens de Raças de Cães:** O usuário pode digitar ou selecionar uma raça de cão e obter uma imagem aleatória dessa raça.
+- [x] **Auto-complete para Raças de Cães:** A aplicação oferece sugestões de raças de cães à medida que o usuário digita, utilizando um elemento <datalist>.
+- [x] **Novo Design Responsivo**: Interface otimizada para diferentes dispositivos, com estilos modernos.
 
-1. Escolher uma API pública (em <https://any-api.com/> , ou qualquer outra, e **deve ser diferente das demais equipes**);
-2. Consumir esta API utilizando NodeJS;
-3. Subir esta API utilizando Docker;
-4. Criar uma página html para fazer consultas à API construída em NodeJS (pode ser bem simples, o layout não será avaliado).
 
-### Docker
+## Como usar o Aplicativo
 
-Execução em Docker, dentro da AWS Cloud.
+**1.Para acesso ao aplicativo, entre no no link:**
+. 
 
-* Subir o projeto NodeJS em Docker na cloud AWS.
-* O grupo pode ficar livre quanto à estratégia adotada para executar o Docker na AWS.
-* Exemplos de como executar:
-  * [Deploy Node js Application on AWS EC2 Server](https://youtu.be/VHzeoDK6L0c?feature=shared)
-  * [Docker na AWS: EC2 ou Elastic Beanstalk? O que é melhor?](https://youtu.be/TJSK9MRPZs4?si=FCm_lDQWIVEUAHlj)
+**2.Após acess ao aplicatiivo, Busque imagens de uma Raça de Cão:**
+- Digite ou selecione o nome de uma raça de cão no campo de entrada.
+- Clique no botão "Pesqusar".
+- Uma imagem aleatória da raça selecionada será exibida.
 
-***
+**3-Obter Nova Imagem da Mesma Raça:**
+- Clique no botão "Fetch New Image" (se disponível) para obter outra imagem aleatória da mesma raça.
 
-## O que será avaliado?
+**4-Verificar Erros:**
+- Se a raça não for encontrada, uma mensagem de erro será exibida informando que a raça não está listada.
 
-- Uso do projeto em NodeJS;
-- Solução em Docker;
-- Projeto em produção na cloud AWS;
-- Seguir as atividades na ordem proposta;
-- Subir códigos no git ao longo do desenvolvimento;
-- Organização geral do código fonte:
-  - Estrutura de pastas;
-  - Estrutura da lógica de negócio;
-  - Divisão de responsabilidades em arquivos/pastas distintos;
-  - Otimização do código fonte (evitar duplicações de código);
-- Objetividade do README.md;
-- Modelo de organização da equipe para o desenvolvimento do projeto;
-- Página criada com acesso online.
+##  Desenvolvimento
 
-***
+**Estrutura do projeto**
 
-## Entrega
+ ```
 
-- **O trabalho deve ser feito em grupos de três ou quatro pessoas**;
-- Criar um repositório no Github;
-- Conferir se a API desejada já não foi escolhida por outra equipe;
-- Subir o trabalho no repositório da equipe com um README.md:
-  - documentar detalhes sobre como a avaliação foi desenvolvida;
-  - relatar dificuldades conhecidas;
-  - descrever como utilizar o sistema;
-  - fornecer a URL para acesso à página;
-- 🔨 Disponibilizar o código fonte desenvolvido (Sugestão: pasta `src`);
-- Colocar o arquivo com a configuração nginx (se utilizado).
+├── src
+│   ├── controllers
+│   │   ├── dogController.js      # Lógica para buscar imagens de cães
+│   │   └── homeController.js     # Lógica para renderizar a página inicial
+│   │
+│   ├── middlewares
+│   │   └── notFound.js           # Middleware para tratamento de erro 404
+│   │
+│   ├── public
+│   │   └── styles.css            # Arquivo de estilos CSS
+│   │
+│   ├── routes
+│   │   └── rotas.js              # Definição das rotas da aplicação
+│   │
+│   ├── templates
+│   │   └── 404.ejs               # Template para página 404
+│   │
+│   └── views
+│       └── index.ejs             # Template EJS para a página inicial
+├── app.js                        # Código do servidor Node.js
+│
+├── docker-compose.yml            # Configuração do Docker Compose
+│
+├── Dockerfile                    # Configuração do Docker
+│
+├── package.json                  # Dependências do projeto
+│
+└── ipackage-lock.json            # Versões exatas das dependências
+ ```
 
-- O prazo de entrega é até às 14h do dia 27/05/2024 no repositório do github (https://github.com/Compass-pb-aws-2024-ABRIL/sprints-2-3-pb-aws-abril).
+## Tecnologias Utilizadas
 
+- **Node.js:** Plataforma de desenvolvimento.
+- **Express:** Framework web para Node.js.
+- **EJS:** Motor de templates para renderização de páginas HTML.
+- **Axios:** Cliente HTTP para fazer requisições à API.
+- **Docker:** Para containerização da aplicação.
+- **Docker Compose:** Para orquestração de containers Docker.
+
+
+## Instalação em caso de uso local
+
+**Pré-requisitos**
+1. Node.js
+2. Docker
+3. Docker Compose
+
+**Passos para Instalação**
+
+- **Clone o repositório:**
+```
+git clone https://github.com/Compass-pb-aws-2024-ABRIL/sprints-2-3-pb-aws-abril.git
+cd sprints-2-3-pb-aws-abril
+ ```
+
+- **Entre na branch:**
+ ```
+git checkout grupo-8
+ ```
+- **Instale as dependências:**
+```
+npm install
+```
+
+- **Build a imagem Docker:**
+ ```
+docker-compose build
+ ```
+
+- **Execute o container Docker:**
+ ```
+docker-compose up
+ ```
+
+- **Acesse a aplicação:**
+Abra o navegador e vá para http://localhost:3000
+
+
+##  Dificuldades
+
+
+## Autores
+**Katarina Lydia Friedrich**
+- | Email | katarinalydia@hotmail.com
+
+**Layon Jose Pedrosa dos Reis**
+- | Email | layonjp300@gmail.com
+
+**Leonardo Loureiro de Almeida**
+- | Email | leoloureiro44@gmail.com
+
+**Manoella dos Reis Leite**
+- | Email | reismanoella@gmail.com
