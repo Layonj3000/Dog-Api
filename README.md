@@ -13,7 +13,7 @@
 
 Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API Dog CEO para obter as imagens das raças de cães. O projeto também está configurado para ser executado em um container Docker usando Docker Compose e esta hospeado na AWS C2.
       
-<img src="image.png" height="400" >
+<img src="src/templates/image.png" height="400" >
 
 ## Funcionalidades
 
