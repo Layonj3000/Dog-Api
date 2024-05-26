@@ -160,4 +160,7 @@ img:hover {
   form {
     flex-direction: column;
   }
+}.home-link {
+  text-decoration: none;
+  color: inherit;
 }
