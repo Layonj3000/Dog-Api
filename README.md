@@ -133,9 +133,9 @@ docker-compose up
 - **Acesse a aplicação:**
 Abra o navegador e vá para http://localhost:3000
 
-- **Como subir a aplicação para a AWS**
-. https://katfrd.notion.site/ECR-e-EC2-na-AWS-36efd2d1cf5943479d64c2982f3dfb59
-
+## 🌐 Arquitetura AWS
+- O passo a passo realizado para subir a aplicação para a AWS pode ser encontrado em: [Link](https://katfrd.notion.site/ECR-e-EC2-na-AWS-36efd2d1cf5943479d64c2982f3dfb59)
+<img src="assets/arquiteturaAWS.png" height="400" >
 
 ## 🔐 Dificuldades
 - Instalação do Docker: Tivemos um caso de instalação do Docker em uma máquina local onde o kernel da WLS estava corrompido. Isso exigiu a reinstalação do Docker e a correção do kernel, o que atrasou um pouco.
