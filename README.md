@@ -9,41 +9,53 @@
  <a href="#-Dificuldades">Dificuldades</a> 
 </p>
 
-##  Descrição
+## 📜 Descrição
 
 Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API Dog CEO para obter as imagens das raças de cães. O projeto também está configurado para ser executado em um container Docker usando Docker Compose e esta hospeado na AWS C2.
       
-<img src="src/templates/image.png" height="400" >
+<img src="assets/image.png" height="400" >
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - [x] **Buscar Imagens de Raças de Cães:** O usuário pode digitar ou selecionar uma raça de cão e obter uma imagem aleatória dessa raça.
 - [x] **Auto-complete para Raças de Cães:** A aplicação oferece sugestões de raças de cães à medida que o usuário digita, utilizando um elemento <datalist>.
 - [x] **Novo Design Responsivo**: Interface otimizada para diferentes dispositivos, com estilos modernos.
 
 
-## Como usar o Aplicativo
+## 🧑‍💻 Como usar a Aplicação
 
-**1.Para acesso ao aplicativo, entre no no link:**
-. 
+**1.Para acesso a aplicação, entre em qualquer um dos links:**
 
-**2.Após acess ao aplicatiivo, Busque imagens de uma Raça de Cão:**
+  ```
+http://54.209.135.120:3000 
+  ```
+```
+http://44.219.183.152:3000
+```
+```
+http://44.195.193.89:3000
+```
+```
+http://52.7.58.93:3000
+```
+**2.Após acesso a aplicação, Busque imagens de uma Raça de Cão:**
 - Digite ou selecione o nome de uma raça de cão no campo de entrada.
-- Clique no botão "Pesqusar".
+- Clique no botão "Pesquisar".
 - Uma imagem aleatória da raça selecionada será exibida.
 
 **3-Obter Nova Imagem da Mesma Raça:**
-- Clique no botão "Fetch New Image" (se disponível) para obter outra imagem aleatória da mesma raça.
+- Clique no botão "Nova Imagem" (se disponível) para obter outra imagem aleatória da mesma raça.
 
 **4-Verificar Erros:**
 - Se a raça não for encontrada, uma mensagem de erro será exibida informando que a raça não está listada.
 
-##  Desenvolvimento
+## 🚀 Desenvolvimento
 
-**Estrutura do projeto**
+**📂 Estrutura do projeto**
 
  ```
-
+├── assets
+│   └── image.png                 # imagem usada no Readme
 ├── src
 │   ├── controllers
 │   │   ├── dogController.js      # Lógica para buscar imagens de cães
@@ -74,7 +86,7 @@ Este é um projeto de uma aplicação web construída com Node.js e Express, que
 └── ipackage-lock.json            # Versões exatas das dependências
  ```
 
-## Tecnologias Utilizadas
+## 📲 Tecnologias Utilizadas
 
 - **Node.js:** Plataforma de desenvolvimento.
 - **Express:** Framework web para Node.js.
@@ -84,7 +96,7 @@ Este é um projeto de uma aplicação web construída com Node.js e Express, que
 - **Docker Compose:** Para orquestração de containers Docker.
 
 
-## Instalação em caso de uso local
+## 🖥️ Instalação em caso de uso local
 
 **Pré-requisitos**
 1. Node.js
@@ -121,11 +133,15 @@ docker-compose up
 - **Acesse a aplicação:**
 Abra o navegador e vá para http://localhost:3000
 
+- **Como subir a aplicação para a AWS**
+. https://katfrd.notion.site/ECR-e-EC2-na-AWS-36efd2d1cf5943479d64c2982f3dfb59
 
-##  Dificuldades
 
+## 🔐 Dificuldades
+- Instalação do Docker: Tivemos um caso de instalação do Docker em uma máquina local onde o kernel da WLS estava corrompido. Isso exigiu a reinstalação do Docker e a correção do kernel, o que atrasou um pouco.
+- Configuração da AWS: Configurar a AWS para rodar a aplicação na nuvem apresentou desafios, especialmente na configuração correta do AWS EC2 para permitir o tráfego HTTP e SSH, bem como na gestão de permissões e segurança.
 
-## Autores
+## 👤 Autores
 **Katarina Lydia Friedrich**
 - | Email | katarinalydia@hotmail.com
 
