@@ -1,12 +1,15 @@
 # Avaliação Sprint 2-3 -> Programa de Bolsas Compass UOL / AWS - ABRIL/2024
 
- <p align="center">
+<p align="center">
  <a href="#-descrição">Descrição</a> •
  <a href="#-funcionalidades">Funcionalidades</a> • 
- <a href="#-Como-usar-o-Aplicativo">Uso</a> • 
- <a href="#-Tecnologias-Utilizadas"> Tecnologias </a> •
- <a href="#-Instalação-em-caso-de-uso-local"> Instalação</a> •
- <a href="#-Dificuldades">Dificuldades</a> 
+ <a href="#-como-usar-a-aplicação">Uso</a> • 
+ <a href="#-desenvolvimento">Desenvolvimento</a> •
+ <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+ <a href="#-instalação-em-caso-de-uso-local">Instalação</a> •
+ <a href="#-arquitetura-aws">Arquitetura</a> •
+ <a href="#-dificuldades">Dificuldades</a> •
+ <a href="#-autores">Autores</a>
 </p>
 
 ## 📜 Descrição
