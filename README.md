@@ -14,8 +14,8 @@
 ## 📜 Descrição
 
 Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API pública [Dog CEO](https://dog.ceo/dog-api/) para obter as imagens das raças de cães. O projeto também está configurado para ser executado em Docker e está hospeado na cloud AWS.
-      
-<img src="assets/image.png" height="400" >
+
+<img src="assets/dogapp.gif" height="400" >
 
 ## ✅ Funcionalidades
 
@@ -129,6 +129,8 @@ Abra o navegador e vá para http://localhost:3000
 
 ## 🌐 Arquitetura AWS
 - O passo a passo realizado para subir a aplicação para a AWS pode ser encontrado em: [Link](https://katfrd.notion.site/ECR-e-EC2-na-AWS-36efd2d1cf5943479d64c2982f3dfb59)
+- A imagem abaixo exemplifica a arquitetura. A aplicação web foi empacotada como uma imagem Docker e armazenada em um repositório ECR, a imagem é puxada do ECR para a instância EC2. O usuário interage com a aplicação via internet por um endereço IPv4 público, e a aplicação faz requisições a uma API externa (Dog API) para obter dados. O Internet Gateway permite a comunicação entre a instância EC2 e a internet.
+
 <img src="assets/arquiteturaAWS.png" height="400" >
 
 ## 🔐 Dificuldades
