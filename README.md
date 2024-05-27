@@ -1,35 +1,33 @@
 # Avaliação Sprint 2-3 -> Programa de Bolsas Compass UOL / AWS - ABRIL/2024
 
 <p align="center">
- <a href="#-descrição">Descrição</a> •
- <a href="#-funcionalidades">Funcionalidades</a> • 
- <a href="#-como-usar-a-aplicação">Uso</a> • 
- <a href="#-desenvolvimento">Desenvolvimento</a> •
- <a href="#-tecnologias-utilizadas">Tecnologias</a> •
- <a href="#-instalação-em-caso-de-uso-local">Instalação</a> •
- <a href="#-arquitetura-aws">Arquitetura</a> •
- <a href="#-dificuldades">Dificuldades</a> •
- <a href="#-autores">Autores</a>
+ <a href="#-descrição">Descrição</a>  •
+ <a href="#-funcionalidades">Funcionalidades</a>  • 
+ <a href="#-como-usar-a-aplicação">Como usar</a>  • 
+ <a href="#-desenvolvimento">Desenvolvimento</a>  • 
+ <a href="#-executar-a-aplicação-localmente">Execução</a>  • 
+  <a href="#-arquitetura-aws">Arquitetura AWS</a>  •
+ <a href="#-dificuldades">Dificuldades</a>  •
+ <a href="#-autores">Autores</a> 
 </p>
 
 ## 📜 Descrição
 
-Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API Dog CEO para obter as imagens das raças de cães. O projeto também está configurado para ser executado em um container Docker usando Docker Compose e esta hospeado na AWS C2.
+Este é um projeto de uma aplicação web construída com Node.js e Express, que permite aos usuários buscar imagens aleatórias de raças de cães. A aplicação utiliza a API pública [Dog CEO](https://dog.ceo/dog-api/) para obter as imagens das raças de cães. O projeto também está configurado para ser executado em Docker e está hospeado na cloud AWS.
       
 <img src="assets/image.png" height="400" >
 
-## ⚙️ Funcionalidades
+## ✅ Funcionalidades
 
 - [x] **Buscar Imagens de Raças de Cães:** O usuário pode digitar ou selecionar uma raça de cão e obter uma imagem aleatória dessa raça.
-- [x] **Auto-complete para Raças de Cães:** A aplicação oferece sugestões de raças de cães à medida que o usuário digita, utilizando um elemento <datalist>.
+- [x] **Auto-complete para Raças de Cães:** A aplicação oferece sugestões de raças de cães à medida que o usuário digita.
 - [x] **Novo Design Responsivo**: Interface otimizada para diferentes dispositivos, com estilos modernos.
 
 
 ## 🧑‍💻 Como usar a Aplicação
 
-**1.Para acesso a aplicação, entre em qualquer um dos links:**
-
-  ```
+**1. Para acesso a aplicação, copie qualquer um dos links abaixo e cole no navegador:**
+```
 http://54.209.135.120:3000 
   ```
 ```
@@ -41,24 +39,22 @@ http://44.195.193.89:3000
 ```
 http://52.7.58.93:3000
 ```
-**2.Após acesso a aplicação, Busque imagens de uma Raça de Cão:**
+**2. Após acesso a aplicação, busque imagens de uma raça de Cão:**
 - Digite ou selecione o nome de uma raça de cão no campo de entrada.
 - Clique no botão "Pesquisar".
 - Uma imagem aleatória da raça selecionada será exibida.
 
-**3-Obter Nova Imagem da Mesma Raça:**
+**3. Obter nova imagem da mesma raça:**
 - Clique no botão "Nova Imagem" (se disponível) para obter outra imagem aleatória da mesma raça.
 
-**4-Verificar Erros:**
+**4. Verificar erros:**
 - Se a raça não for encontrada, uma mensagem de erro será exibida informando que a raça não está listada.
 
 ## 🚀 Desenvolvimento
 
-**📂 Estrutura do projeto**
+**📂 Estrutura de pastas**
 
  ```
-├── assets
-│   └── image.png                 # imagem usada no Readme
 ├── src
 │   ├── controllers
 │   │   ├── dogController.js      # Lógica para buscar imagens de cães
@@ -89,9 +85,9 @@ http://52.7.58.93:3000
 └── ipackage-lock.json            # Versões exatas das dependências
  ```
 
-## 📲 Tecnologias Utilizadas
+**⚙️ Tecnologias Utilizadas**
 
-- **Node.js:** Plataforma de desenvolvimento.
+- **Node.js:**  Ambiente de execução JavaScript 
 - **Express:** Framework web para Node.js.
 - **EJS:** Motor de templates para renderização de páginas HTML.
 - **Axios:** Cliente HTTP para fazer requisições à API.
@@ -99,14 +95,12 @@ http://52.7.58.93:3000
 - **Docker Compose:** Para orquestração de containers Docker.
 
 
-## 🖥️ Instalação em caso de uso local
+## 💻 Executar a aplicação localmente
 
-**Pré-requisitos**
-1. Node.js
-2. Docker
-3. Docker Compose
+**Pré-requisitos** :  
+- `Node.js`  ou `Docker` e `Docker Compose`
 
-**Passos para Instalação**
+**Passos para executar a aplicação**
 
 - **Clone o repositório:**
 ```
@@ -118,22 +112,19 @@ cd sprints-2-3-pb-aws-abril
  ```
 git checkout grupo-8
  ```
-- **Instale as dependências:**
+- **Caso prefira executar pelo node.js instale as dependências e rode o projeto:**
 ```
 npm install
+node app.js  
 ```
 
-- **Build a imagem Docker:**
+- **Ou caso prefira executar pelo docker faça o Build da imagem Docker e execute o container Docker:**
  ```
 docker-compose build
- ```
-
-- **Execute o container Docker:**
- ```
 docker-compose up
  ```
 
-- **Acesse a aplicação:**
+- **Acesse a aplicação localmente:**
 Abra o navegador e vá para http://localhost:3000
 
 ## 🌐 Arquitetura AWS
@@ -145,14 +136,7 @@ Abra o navegador e vá para http://localhost:3000
 - Configuração da AWS: Configurar a AWS para rodar a aplicação na nuvem apresentou desafios, especialmente na configuração correta do AWS EC2 para permitir o tráfego HTTP e SSH, bem como na gestão de permissões e segurança.
 
 ## 👤 Autores
-**Katarina Lydia Friedrich**
-- | Email | katarinalydia@hotmail.com
-
-**Layon Jose Pedrosa dos Reis**
-- | Email | layonjp300@gmail.com
-
-**Leonardo Loureiro de Almeida**
-- | Email | leoloureiro44@gmail.com
-
-**Manoella dos Reis Leite**
-- | Email | reismanoella@gmail.com
+- [Katarina Lydia Friedrich](https://github.com/katfr) | Email: katarinalydia@hotmail.com |
+- [Layon Jose Pedrosa dos Reis](https://github.com/Layonj3000) | Email: layonjp300@gmail.com |
+- [Leonardo Loureiro de Almeida](https://github.com/lloureiro2) | Email: leoloureiro44@gmail.com |
+- [Manoella dos Reis Leite](https://github.com/ManoellaReis) | Email: reismanoella@gmail.com |  
