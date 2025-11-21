@@ -1,15 +1,4 @@
-# Avaliação Sprint 2-3 -> Programa de Bolsas Compass UOL / AWS - ABRIL/2024
-
-<p align="center">
- <a href="#-descrição">Descrição</a>  •
- <a href="#-funcionalidades">Funcionalidades</a>  • 
- <a href="#-como-usar-a-aplicação">Como usar</a>  • 
- <a href="#-desenvolvimento">Desenvolvimento</a>  • 
- <a href="#-executar-a-aplicação-localmente">Execução</a>  • 
-  <a href="#-arquitetura-aws">Arquitetura AWS</a>  •
- <a href="#-dificuldades">Dificuldades</a>  •
- <a href="#-autores">Autores</a> 
-</p>
+<h1 align="center"> Dog App 🐾 </h1>
 
 ## 📜 Descrição
 
@@ -137,8 +126,15 @@ Abra o navegador e vá para http://localhost:3000
 - Instalação do Docker: Tivemos um caso de instalação do Docker em uma máquina local onde o kernel da WLS estava corrompido. Isso exigiu a reinstalação do Docker e a correção do kernel, o que atrasou um pouco.
 - Configuração da AWS: Configurar a AWS para rodar a aplicação na nuvem apresentou desafios, especialmente na configuração correta do AWS EC2 para permitir o tráfego HTTP e SSH, bem como na gestão de permissões e segurança.
 
-## 👤 Autores
-- [Katarina Lydia Friedrich](https://github.com/katfr) | Email: katarinalydia@hotmail.com |
-- [Layon Jose Pedrosa dos Reis](https://github.com/Layonj3000) | Email: layonjp300@gmail.com |
-- [Leonardo Loureiro de Almeida](https://github.com/lloureiro2) | Email: leoloureiro44@gmail.com |
-- [Manoella dos Reis Leite](https://github.com/ManoellaReis) | Email: reismanoella@gmail.com |  
+## 👨‍💻 Autores
+<div>
+  <table style="margin: 0 auto;">
+    <tr>
+      <td><a href="https://github.com/katfr"><img loading="lazy" src="https://avatars.githubusercontent.com/u/86882743?v=4" width="115"><br><sub>Katarina Lydia</sub></a></td>
+      <td><a href="https://github.com/Layonj300"><img loading="lazy" src="https://avatars.githubusercontent.com/u/106559843?v=4" width="115"><br><sub>Layon Reis</sub></a></td>
+      <td><a href="https://github.com/lloureiro2"><img loading="lazy" src="https://avatars.githubusercontent.com/u/48761420?v=4" width="115"><br><sub>Leonardo Loureiro</sub></a></td>
+      <td><a href="https://github.com/ManoellaReis"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5603AQFlJdXVPhVe5w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722983069276?e=1765411200&v=beta&t=UI-T86SWskykrsHVe-fF8o61U4saMY4wtXC-Z-60GMA" width="115"><br><sub>Manoella Reis</sub></a></td>
+    </tr>
+  </table>
+</div>
+
